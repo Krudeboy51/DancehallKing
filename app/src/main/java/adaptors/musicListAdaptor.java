@@ -1,11 +1,17 @@
 package adaptors;
 
 import android.content.Context;
+import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +53,35 @@ public class musicListAdaptor extends BaseAdapter{
 
         View row = inflator.inflate(R.layout.music_item_row, null, true);
 
+        placeHolder holder = new placeHolder();
+
+        holder.menuS = (Spinner) row.findViewById(R.id.music_menu_S);
+
+        ArrayAdapter<CharSequence> adaptor = ArrayAdapter.createFromResource(context, R.array.music_menu_items, android.R.layout.simple_spinner_item);
+        adaptor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        holder.menuS.setAdapter(adaptor);
+
+        holder.menuS.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(parent.getContext(),
+                        "OnItemSelectedListener : " + parent.getItemAtPosition(position).toString(),
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         return row;
+    }
+
+
+    private class placeHolder{
+        Spinner menuS;
+        TextView title;
+        TextView artist;
     }
 }
 

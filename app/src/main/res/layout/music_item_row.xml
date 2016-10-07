@@ -15,16 +15,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Title"
+            android:id="@+id/music_title"
             android:textSize="24sp"
             android:paddingBottom="5dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Artist"
+            android:id="@+id/music_artist"
             android:textSize="16sp"/>
     </LinearLayout>
-    <Button
+    <Spinner
         android:layout_width="39dp"
         android:layout_height="wrap_content"
-        android:text=":" />
+        android:text=":"
+        android:id="@+id/music_menu_S"/>
 </LinearLayout>
