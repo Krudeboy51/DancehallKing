@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/play_image"
+        android:background="@color/baseColor"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/play_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/play_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="artist"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"/>
+
+    <Spinner
+        android:layout_width="39dp"
+        android:layout_height="30dp"
+        android:text=":"
+        android:id="@+id/play_menu_S"
+        android:layout_gravity="right"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:weightSum="3"
+        android:layout_gravity="end">
+        <Button
+            android:id="@+id/play_prevB"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="prev"/>
+        <Button
+            android:id="@+id/play_playB"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Play"/>
+        <Button
+            android:id="@+id/play_nextB"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="next"/>
+    </LinearLayout>
+</LinearLayout>
