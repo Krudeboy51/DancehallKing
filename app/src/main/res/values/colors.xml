@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="baseColor">#244343</color>
     <color name="listColor">#EDFFEC</color>
+    <color name="baseBG">#FAFAFF</color>
 </resources>
